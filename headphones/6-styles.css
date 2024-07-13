@@ -181,6 +181,7 @@ nav ul a:hover{
   margin-left: 29px;
   margin-right: 29px;
 }
+
 .what-card span{
   font-size: 110px;
   color: #FF6565;
@@ -195,7 +196,7 @@ nav ul a:hover{
   font-weight: 500;
   margin-top: 13px;
 }
-/* our results speak... section */
+/* our resul speaks... section */
 #our{
   display: flex;
   flex-direction: column;
@@ -208,6 +209,7 @@ nav ul a:hover{
 }
 .our-header {
   width: 637px;
+
 }
 .our-header h2{
   color: #FFFFFF;
@@ -223,11 +225,12 @@ nav ul a:hover{
 }
 
 .our-list{
+  position: relative;
   display: flex;
   justify-content: space-between;
   width: 988px;
   height: 190px;
-  margin-top: 56px;
+  margin-top: 80px;
 }
 .our-list1{
   display: flex;
@@ -242,15 +245,37 @@ nav ul a:hover{
   height: 190px;
 }
 
-.our-card{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.pholder{
   width: 190px;
   height: 190px;
-  background-image: url(./images/pentagone.png);
-  background-repeat: no-repeat;
-  background-size:contain;
+}
+
+.pentagon{
+  transform: translate(0%, 100%);
+  height: 0;
+  width: 120px;
+  border-top: 91px solid #FF6565;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;   
+}
+
+.pentagon:after{
+  position: absolute;
+  content: '';
+  border-bottom: 80px solid #FF6565;
+  border-left: 90px solid transparent;
+  border-right: 90px solid transparent;
+  bottom: 90px;
+  left: -30px;
+}
+
+.our-card{
+  position: absolute;
+  bottom: 80px;
+  color: #FFFFFF;
+  background-color: transparent;
+  bottom: -25px;
+  z-index: 1;
 }
 
 .our-card h2{
@@ -321,7 +346,6 @@ footer{
   display: flex;
   flex-direction: column;
   height: 249px;
-  
   padding: 0 120px;
   background-color: #071629;
 }
@@ -358,14 +382,15 @@ footer p{
 
 @media (min-width: 480px) and (max-width: 768px) {
   header{
-    height: 869px;
+    display: flex;
+   height: 800px;
   }
   nav{
     width: 633px;
   }
   .home-box{
     width: 637px;
-    height: 313px;
+    height: 350px;
   }
 
   /* what we do section */
@@ -400,9 +425,7 @@ footer p{
     align-items: center;
     height: 876px;
     width: 100%;
-    background-image: url('images/headphones_hero_2.jpg');
-    background-repeat: no-repeat;
-    background-size:cover;
+  
   }
   .our-header {
     width: 637px;
@@ -589,18 +612,18 @@ footer p{
     width: 190px;
     height: 443px;
     margin-bottom: 21px;
+    margin-top: 30px;
   }
   
   .our-card{
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 190px;
     height: 190px;
-    background-image: url(./images/pentagone.png);
-    background-repeat: no-repeat;
-    background-size:contain;
-    margin-top: 21px;
+    z-index: 1;
+    left: -36px;
   }
   
   .footer-content{
