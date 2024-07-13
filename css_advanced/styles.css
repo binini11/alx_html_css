@@ -7,15 +7,15 @@
     max-width: 1440px; 
     background:none;
     color: #ffffff;
-    margin: 0px;
+    margin: auto;
     padding: 0px;
 }
 
 body{
     background-image: url(./images/Object.png);
     background-repeat: no-repeat;
+    width:100%;
 }
-
 header{
     width: auto;
     height: auto;
@@ -26,11 +26,13 @@ header{
 nav{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 35.02px;
 }
 
 nav img{
+    align-self: center;
+    justify-self: start;
     width: 167.02px;
     height: 29.46px;
 }
@@ -38,7 +40,7 @@ nav img{
 nav ul{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
     list-style-type: none;
     width: 234px;
     height: 29.46px;
@@ -47,6 +49,10 @@ nav ul{
 nav a{
     text-decoration: none;
     height: 15px;
+}
+
+nav a:hover{
+    color: orange;
 }
 
 section{
@@ -112,8 +118,11 @@ section{
 .learn-from-pros{
     display: flex;
     justify-content: space-around;
-    width: 1009px;    
+    width: 1009px;
+    flex-wrap: wrap; 
 }
+
+
 
 .v-image-box{
     display: flex;
@@ -135,6 +144,10 @@ section{
     height: 392px;
     justify-content: center;
 }
+
+.testimonial div{
+    padding-right: 20px
+}
 .quote{
     display: flex;
     flex-direction: column;
@@ -142,6 +155,10 @@ section{
     font-size: 22px;
     width: 730px;
     height: 158;
+}
+
+.testimonial blockquote{
+    padding-bottom: 20px;
 }
 .quote h3{
     font-weight: bold;
